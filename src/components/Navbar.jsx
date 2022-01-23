@@ -31,7 +31,7 @@ const Navbar = ({ Cart,orders,setOrders,setQuantity,count }) => {
                         <li className="nav-btns nav-li font-normal py-8 hover:text-gray-800 transition duration-300">About</li>
                         <li className="nav-btns nav-li font-normal py-8 hover:text-gray-800 transition duration-300">Contact</li>
                     </ul>
-                    <div className="flex items-center md:gap-10 gap-5 relative">
+                    <div className="flex items-center md:gap-10 gap-5 md:relative">
                         <div onClick={() => setShow(!show)} className="relative cursor-pointer">
                             <Cart className="cursor-pointer hover:text-gray-900" fill={"hsl(219, 9%, 45%)"} setChangeColor={setChangeColor} changeColor={changeColor} />
                             <span className="absolute -top-2 text-white -right-2 w-5 text-center rounded-md cart-btn text-xs font-bold">{ orders.length > 0 && count }</span>
@@ -39,7 +39,7 @@ const Navbar = ({ Cart,orders,setOrders,setQuantity,count }) => {
                         <img className="md:w-10 w-8 cursor-pointer hover-img object-cover" src="/images/image-avatar.png" alt="avatar" />
                         {/* Show Cart */}
                         { show && 
-                            <div className="absolute md:top-20 top-16 bg-white shadow-2xl md:w-96 w-80 rounded-lg md:right-1 -right-1 md:h-52 h-48">
+                            <div className="absolute md:top-20 top-16 z-50 bg-white shadow-2xl md:w-96 w-screen rounded-lg md:right-1 right-0 md:h-52 h-64">
                                  <h1 className="titles font-bold p-3 border-b border-gray-300 select-none">Cart</h1>
                                  <div className="flex justify-center items-center h-full relative">
                                     { orders.length < 1 ? 
@@ -68,17 +68,20 @@ const Navbar = ({ Cart,orders,setOrders,setQuantity,count }) => {
                 </nav>
             </div>
             { showMenu &&
-                <nav className="md:hidden fixed left-0 bg-white w-3/5 min-h-screen">
-                    <div onClick={() => setShowMenu(!showMenu)} className="cursor-pointer mt-5 ml-5">
-                        <Close />
+                <nav className="md:hidden grid grid-cols-3 w-full fixed left-0 z-50  min-h-screen">
+                    <div className="col-span-2 bg-white">
+                        <div onClick={() => setShowMenu(!showMenu)} className="cursor-pointer mt-5 ml-5">
+                            <Close />
+                        </div>
+                        <ul className="flex flex-col gap-5 z-50 ml-5 mt-10 font-bold">
+                            <li>Collections</li>
+                            <li>Men</li>
+                            <li>Women</li>
+                            <li>About</li>
+                            <li>Contact</li>
+                        </ul>
                     </div>
-                    <ul className="flex flex-col gap-5 z-50 ml-5 mt-10 font-bold">
-                        <li>Collections</li>
-                        <li>Men</li>
-                        <li>Women</li>
-                        <li>About</li>
-                        <li>Contact</li>
-                    </ul>
+                    <div className="col-span-1 side-bg"></div>
                 </nav>
             }
         </div>

@@ -68,7 +68,7 @@ const Shoe = ({ showLightbox,setShowLightbox,showImg,setShowImg }) => {
                 <div className="relative">
                     <span onClick={() => goPrevious(1)} className="md:hidden absolute left-5 top-1/2 bg-white rounded-full h-10 w-10 flex items-center justify-center"><Previous /></span>
                     <img onClick={() => setShowLightbox(!showLightbox)} className="md:w-96 md:h-96 w-full object-cover md:rounded-xl cursor-pointer" src={showImg} alt="image1" />
-                    <span onClick={() => goNext(1)} className="md:hidden absolute right-5 top-1/2 bg-white rounded-full h-10 w-10 flex items-center justify-center"><Next /></span>
+                    <span onClick={() => goNext(1)} className="md:hidden absolute right-5 top-1/2 bg-white rounded-full h-10 w-10 flex items-center justify-center z-0"><Next /></span>
                 </div>
                 <section className="md:flex w-full justify-between gap-2 mt-5 hidden">
                     {/* Thumbnails */}
