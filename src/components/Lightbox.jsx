@@ -74,14 +74,14 @@ const Lightbox = ({ showImg,setShowImg,showLightbox,setShowLightbox }) => {
                 <div className="absolute -top-5 right-0 cursor-pointer" onClick={() => setShowLightbox(!showLightbox)}>
                     <Close changeColor={changeColor} setChangeColor={setChangeColor} />
                 </div>
-                  <div className="relative">
+                  <div className="relative flex flex-col items-center">
                     <div onClick={() => goNext(1)} className="absolute top-1/2 -right-5 rounded-full bg-gray-100 h-10 w-10 flex items-center justify-center cursor-pointer">
                         <Next changeNext={changeNext} setChangeNext={setChangeNext} />
                     </div>
                     <div onClick={() => goPrevious(1)} className="absolute top-1/2 -left-5 rounded-full bg-gray-100 h-10 w-10 flex items-center justify-center cursor-pointer">
                         <Previous changePrevious={changePrevious} setChangePrevious={setChangePrevious} />
                     </div>
-                    <img className="select-none w-full h-96 object-cover rounded-xl" src={showImg} alt="image1" />
+                    <img className="select-none md:w-full w-72 h-72 object-cover rounded-xl self-center" src={showImg} alt="image1" />
                   </div>
                   <section className="flex w-full justify-center gap-4 mt-5">
                       {/* Thumbnails */}
