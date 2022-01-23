@@ -1,0 +1,179 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+:root {
+    /* Primary */
+    --clr-orange-primary: hsl(26, 100%, 55%);
+    --clr-pale-orange-primary: hsl(25, 100%, 94%);
+
+    /* Neutral */
+    --clr-very-vark-blue: hsl(220, 13%, 13%);
+    --clr-dark-grayish-blue: hsl(219, 9%, 45%);
+    --clr-grayish-blue: hsl(220, 14%, 75%);
+    --clr-light-grayish-blue: hsl(223, 64%, 98%);
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-black-lightbox: hsl(0, 0%, 0%);
+    --ff-kumbh: 'Kumbh Sans', sans-serif;
+
+    /* Images */
+    --thumb-1: url('../assets/image-product-1-thumbnail.jpg');
+    --thumb-2: url('../assets/image-product-2-thumbnail.jpg');
+    --thumb-3: url('../assets/image-product-3-thumbnail.jpg');
+    --thumb-4: url('../assets/image-product-4-thumbnail.jpg');
+
+    --overlay: linear-gradient( rgba(219, 216, 216, 0.5), rgba(214, 211, 211, 0.5) );
+}
+#root {
+    position:relative;
+}
+body {
+    font-family: var(--ff-kumbh);
+    font-size:16px;
+    height:100vh;
+    background: var(--clr-white);
+    position:relative;
+}
+.center-content {
+    @apply flex justify-center;
+}
+.fit-content {
+    @apply max-w-7xl w-full;
+}
+.titles {
+    color:var(--clr-very-vark-blue);
+}
+.nav-title {
+    font-family: var(--ff-kumbh);
+}
+.nav-btns {
+    color:var(--clr-dark-grayish-blue);
+    cursor:pointer;
+}
+.nav-li:hover {
+    border-bottom:3px solid var(--clr-orange-primary);
+    transition:0.4s ease-in-out;
+}
+.thumb-border-active {
+    border: 2px solid var(--clr-orange-primary);
+}
+.small-text {
+    color:var(--clr-orange-primary);
+}
+.cart-btn {
+    background:var(--clr-orange-primary);
+}
+.qty-btn {
+    background: var(--clr-light-grayish-blue);
+}
+.discount {
+    background: var(--clr-pale-orange-primary);
+}
+.before-price {
+    color: var(--clr-grayish-blue);
+}
+
+.thumbnail-img1 {
+    background:var(--thumb-1);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    object-fit:cover;
+}
+.thumbnail-img2 {
+    background: var(--thumb-2);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    object-fit:cover;
+}
+.thumbnail-img3 {
+    background: var(--thumb-3);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    object-fit:cover;
+}
+.thumbnail-img4 {
+    background: var(--thumb-4);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    object-fit:cover;
+}
+.thumb-cover1 {
+    border: 2px solid var(--clr-orange-primary);
+    background: var(--overlay),var(--thumb-1);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    object-fit:cover;
+}
+.thumb-cover2 {
+    border: 2px solid var(--clr-orange-primary);
+    background: var(--overlay),var(--thumb-2);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    object-fit:cover;
+}
+.thumb-cover3 {
+    border: 2px solid var(--clr-orange-primary);
+    background: var(--overlay),var(--thumb-3);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    object-fit:cover;
+}
+.thumb-cover4 {
+    border: 2px solid var(--clr-orange-primary);
+    background: var(--overlay),var(--thumb-4);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    object-fit:cover;
+}
+.hover-img:hover {
+    border:2px solid var(--clr-orange-primary);
+    border-radius:500px;
+    transition:0.2s ease-in-out;
+}
+.hover-thumb1:hover {
+    background: var(--overlay),var(--thumb-1);
+    transition:0.6s ease-in-out;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    object-fit:cover;
+}
+.hover-thumb2:hover {
+    background: var(--overlay),var(--thumb-2);
+    transition:0.6s ease-in-out;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    object-fit:cover;
+}
+.hover-thumb3:hover {
+    background: var(--overlay),var(--thumb-3);
+    transition:0.6s ease-in-out;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    object-fit:cover;
+}
+.hover-thumb4:hover {
+    background: var(--overlay),var(--thumb-4);
+    transition:0.6s ease-in-out;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    object-fit:cover;
+}
